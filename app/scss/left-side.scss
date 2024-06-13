@@ -1,0 +1,34 @@
+.left-indent {
+    padding: 3rem 1.5rem 0;
+}
+
+@mixin hide-scrollbar() {
+    & {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .img{
+    width: 25px;
+    &-logo {
+        height: 40px;
+    }
+    &-people {
+        height: 18.75px;
+    }
+    &-chat{
+        height: 23.33px;
+    }
+    &-person{
+        width: 18.75px;
+        height: 18.75px;
+    }
+  }

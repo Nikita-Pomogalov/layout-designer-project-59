@@ -1,1 +1,9 @@
 // npx stylelint ./app/scss/**/*.scss 
+// "empty-line-between-groups": true, - for stylelintr
+$enable-shadows: true;
+
+@import "./settings.scss";
+@import "./header.scss";
+@import "./left-side.scss";
+@import "./right-side.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

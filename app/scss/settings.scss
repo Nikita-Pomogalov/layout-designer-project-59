@@ -1,0 +1,56 @@
+@use "sass:map";
+
+$theme-colors: (
+  "primary": #4545A5,
+  "secondary": #6C757D,
+  "success": #28A745,
+  "danger": #DC3545,
+  "warning": #FFC107,
+  "info": #17A2B8,
+  "light": #FBFBFB,
+  "dark": #343a40,
+  "gray": #EFEFEF,
+);
+
+$gray:      map.get($theme-colors, "gray");
+$primary:   map.get($theme-colors, "primary");
+$secondary: map.get($theme-colors, "secondary");
+$success:   map.get($theme-colors, "success");
+$info:      map.get($theme-colors, "info");
+$warning:   map.get($theme-colors, "warning");
+$danger:    map.get($theme-colors, "danger");
+$light:     map.get($theme-colors, "light");
+$dark:      map.get($theme-colors, "dark");
+
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1540px
+);
+
+.set {
+  height: 100vw;
+  overflow-y: hidden;
+  border: solid $gray 1rem;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.border-right {
+  border-right: solid 1px $gray;
+}
