@@ -42,7 +42,7 @@ $container-max-widths: (
 );
 
 .set {
-  height: 100vw;
+  height: 100vh;
   overflow-y: hidden;
   border: solid $gray 1rem;
 }
@@ -53,4 +53,20 @@ $container-max-widths: (
 
 .border-right {
   border-right: solid 1px $gray;
+}
+
+@media screen and (width <= 1200px) {
+    .mob-main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .set {
+        border: none;
+    }
+
+    .mob-content {
+        justify-content: space-between;
+        margin: 0 10px;
+    }
 }

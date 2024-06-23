@@ -3,36 +3,36 @@
     "A": [{
       name: "Алексей Примадонин",
       status: "Онлайн",
-      avatar: "/images/avatar_3.jpg"
+      avatar: "../app/images/avatar_3.jpg"
     }],
 
     "В": [{
       name: "Вениамин Редакторович",
       status: "Онлайн",
-      avatar: "/images/avatar_4.jpg"
+      avatar: "../app/images/avatar_4.jpg"
     }],
 
     "Д": [{
       name: "Джедай Падаванов",
       status: "Был онлайн вчера",
-      avatar: "/images/avatar_2.jpg"
+      avatar: "../app/images/avatar_2.jpg"
     }],
 
     "К": [{
       name: "Кодовёнок Хекслетович",
       status: "Был онлайн 3 часа назад",
-      avatar: "/images/avatar_1.jpg"
+      avatar: "../app/images/avatar_1.jpg"
     },
     {
       name: "Королева Верстальщина",
       status: "Была онлайн вчера",
-      avatar: "/images/avatar_5.jpg"
+      avatar: "../app/images/avatar_5.jpg"
     }],
 
     "П": [{
       name: "Питонист Джангович",
       status: "Был онлайн вчера",
-      avatar: "/images/avatar_6.jpg"
+      avatar: "../app/images/avatar_6.jpg"
     }],
   }
 
@@ -43,25 +43,41 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="./styles/main.css")
         title Document
-    body
+    body.overflow-y-hidden
        .container-xxl.set
             .row 
-                .col-4.p-0.border-right.vh-100
+                .col-xl-4.p-0.border-right.vh-100.mob-main
                     header.header.text-bg-primary.align-middle
-                        .d-flex.p-3.justify-content-evenly.align-items-center
-                            img(src="../app/images/icons/logo.svg", alt="").img-logo
-                            .d-flex.gap-2.align-items-center   
-                                img(src="../app/images/icons/people.svg", alt="").img-people
-                                p.text-white.m-0.font-size-14 Контакты
-                            .d-flex.gap-2.align-items-center 
-                                img(src="../app/images/icons/chat.svg", alt="").img-chat
-                                p.text-white.m-0.font-size-14 Сообщения
-                            .d-flex.gap-2.align-items-center
-                                img(src="../app/images/icons/person.svg", alt="").img-person
-                                p.text-white.m-0.font-size-14 Профиль
+                        .d-flex.gap-xl-5.p-3.gap-mob.mob-content
+                            img(src="../app/images/icons/logo.svg", alt="").img-logo 
+                            .d-flex.gaps.justify-content-evenly.align-items-center
+                                .d-flex.gap-2.align-items-center   
+                                    img(src="../app/images/icons/people.svg", alt="").img-people
+                                    p.text-white.m-0.font-size-14 Контакты
+                                .d-flex.gap-2.align-items-center 
+                                    img(src="../app/images/icons/chat.svg", alt="").img-chat
+                                    p.text-white.m-0.font-size-14 Сообщения
+                                .d-flex.gap-2.align-items-center
+                                    img(src="../app/images/icons/person.svg", alt="").img-person
+                                    p.text-white.m-0.font-size-14 Профиль
                     .left-indent
-                .col-8.vh-100
+                        h2 Контакты
+                         
+                        p.text-secondary.search Поиск по контактам
+                        .list.d-flex.flex-column
+                            #contacts
+                            each value, key in contacts
+                                p.text-secondary= key
+                                each contact2 in value
+                                    .contact2.d-flex.form.p-3.gap-3
+                                        img(src=contact2.avatar, alt="").img-card.rounded-circle
+                                        .d-flex.flex-column
+                                            .name= contact2.name
+                                            .status.text-secondary.text-smaller= contact2.status
+                                                                                            
+                            
+                .col-xl-8.vh-100
                     .d-flex.flex-column.justify-content-center.align-items-center.h-100
                         img(src="../app/images/avatar_1.jpg", alt="").rounded-circle.m-b-2
-                        h1.h6.mb-0 Привет, кодовёнок
+                        h1.h6.mb-0 Привет, Кодовёнок
                         p Выбери чат, чтобы начать общаться
