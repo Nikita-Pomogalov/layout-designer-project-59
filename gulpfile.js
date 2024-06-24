@@ -38,7 +38,7 @@ const sass2css = () => {
 
 const pug2html = () => {
   return src([
-    './app/index.pug',
+    './app/**/*.pug',
   ])
   .pipe(pug())
   .pipe(dest('./build/'))

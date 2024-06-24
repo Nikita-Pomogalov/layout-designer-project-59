@@ -13,7 +13,7 @@
   border-right: solid 1px #EFEFEF;
 }
 
-@media screen and (width <= 1200px) {
+@media screen and (width <= 1300px) {
   .mob-main {
     display: flex;
     flex-direction: column-reverse;
@@ -32,7 +32,7 @@
   border-radius: 16px 0 0 0;
 }
 
-@media screen and (width <= 1200px) {
+@media screen and (width <= 1300px) {
   .header {
     width: 100%;
     height: 72px;
@@ -12072,5 +12072,42 @@ textarea.form-control-lg {
 }
 
 .gaps {
-  gap: 2.5rem !important;
+  gap: 2rem !important;
 }
+
+.time {
+  color: #ADB5BD;
+}
+
+.msg {
+  max-width: 318px;
+  min-width: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (width <= 1400px) {
+  .gap-xl-5 {
+    gap: 1rem !important;
+  }
+}
+@media screen and (width <= 1550px) {
+  .gaps {
+    gap: 1rem !important;
+  }
+  .msg {
+    max-width: 200px;
+  }
+}
+@media screen and (width <= 500px) {
+  .msg {
+    max-width: 200px;
+  }
+}
+@media screen and (width <= 400px) {
+  .msg {
+    max-width: 100px;
+  }
+}
+/* ??? УЗНАТЬ ЧЁ С ХЕДЕРОВ (gaps) ??? */

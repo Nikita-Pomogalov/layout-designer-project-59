@@ -55,7 +55,7 @@ $container-max-widths: (
   border-right: solid 1px $gray;
 }
 
-@media screen and (width <= 1200px) {
+@media screen and (width <= 1300px) {
     .mob-main {
         display: flex;
         flex-direction: column-reverse;

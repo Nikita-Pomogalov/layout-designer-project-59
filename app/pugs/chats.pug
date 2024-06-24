@@ -1,0 +1,36 @@
+-
+  var chats = [
+    {
+      name: "Вениамин Редакторович",
+      msg: "o_O",
+      avatar: "../app/images/avatar_4.jpg",
+      time: "11:45"
+    },
+    {
+      name: "Джедай Падаванов",
+      msg: "Привет, скоро третий проект? Уже скоро надо будет выложить",
+      avatar: "../app/images/avatar_2.jpg",
+      time: "10:12"
+    },
+    {
+      name: "Алексей Примадонин",
+      msg: "Тесты упали >_<",
+      avatar: "../app/images/avatar_3.jpg",
+      time: "08:53"
+    },
+  ];
+  
+h2 Чаты
+
+p.text-secondary.search Поиск по сообщениям
+.list.d-flex.flex-column
+    #contacts
+    each value in chats
+        .d-flex.justify-content-between.form
+            .contact2.d-flex.p-3.gap-3
+                img(src=value.avatar, alt="").img-card.rounded-circle
+                .d-flex.flex-column
+                    .name= value.name
+                    .status.text-secondary.text-smaller.msg= value.msg
+            .time.pt-3= value.time
+                
