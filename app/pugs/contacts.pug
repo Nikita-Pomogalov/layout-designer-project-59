@@ -36,17 +36,29 @@
     }],
   }
 
-
-h2 Контакты
-
-p.text-secondary.search Поиск по контактам
-.list.d-flex.flex-column
-    #contacts
-    each value, key in contacts
-        p.text-secondary= key
-        each contact2 in value
-            .contact2.d-flex.form.p-3.gap-3
-                img(src=contact2.avatar, alt="").img-card.rounded-circle
-                .d-flex.flex-column
-                    .name= contact2.name
-                    .status.text-secondary.text-smaller= contact2.status
+if page === 'chat'
+    section.tab-pane.fade(id='nav-contacts' role='tabpanel' aria-labelledby='nav-contacts-tab')
+        h2 Контакты
+        p.text-secondary.search Поиск по контактам
+        .list.d-flex.flex-column
+            each value, key in contacts
+                p.text-secondary= key
+                each contact2 in value
+                    .contact2.d-flex.form.p-3.gap-3
+                        img(src=contact2.avatar, alt="").img-card.rounded-circle
+                        .d-flex.flex-column
+                            .name= contact2.name
+                            .status.text-secondary.text-smaller= contact2.status
+else
+    section.tab-pane.fade.show.active(id='nav-contacts' role='tabpanel' aria-labelledby='nav-contacts-tab')
+        h2 Контакты
+        p.text-secondary.search Поиск по контактам
+        .list.d-flex.flex-column
+            each value, key in contacts
+                p.text-secondary= key
+                each contact2 in value
+                    .contact2.d-flex.form.p-3.gap-3
+                        img(src=contact2.avatar, alt="").img-card.rounded-circle
+                        .d-flex.flex-column
+                            .name= contact2.name
+                            .status.text-secondary.text-smaller= contact2.status

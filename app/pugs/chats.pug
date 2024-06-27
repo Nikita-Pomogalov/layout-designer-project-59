@@ -19,18 +19,32 @@
       time: "08:53"
     },
   ];
-  
-h2 Чаты
 
-p.text-secondary.search Поиск по сообщениям
-.list.d-flex.flex-column
-    #contacts
-    each value in chats
-        .d-flex.justify-content-between.form
-            .contact2.d-flex.p-3.gap-3
-                img(src=value.avatar, alt="").img-card.rounded-circle
-                .d-flex.flex-column
-                    .name= value.name
-                    .status.text-secondary.text-smaller.msg= value.msg
-            .time.pt-3= value.time
-                
+if page === 'chat'
+    section.tab-pane.fade.show.active(id='nav-chats' role='tabpanel' aria-labelledby='nav-chats-tab')
+        h2 Чаты
+        p.text-secondary.search Поиск по сообщениям
+        .list.d-flex.flex-column
+            #chats
+            each value in chats
+                .d-flex.justify-content-between.form
+                    .contact2.d-flex.p-3.gap-3
+                        img(src=value.avatar, alt="").img-card.rounded-circle
+                        .d-flex.flex-column
+                            .name= value.name
+                            .status.text-secondary.text-smaller.msg= value.msg
+                    .time.pt-3= value.time
+else 
+    section.tab-pane.fade(id='nav-chats' role='tabpanel' aria-labelledby='nav-chats-tab')
+        h2 Чаты
+        p.text-secondary.search Поиск по сообщениям
+        .list.d-flex.flex-column
+            #chats
+            each value in chats
+                .d-flex.justify-content-between.form
+                    .contact2.d-flex.p-3.gap-3
+                        img(src=value.avatar, alt="").img-card.rounded-circle
+                        .d-flex.flex-column
+                            .name= value.name
+                            .status.text-secondary.text-smaller.msg= value.msg
+                    .time.pt-3= value.time

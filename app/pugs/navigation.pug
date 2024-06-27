@@ -1,0 +1,24 @@
+.d-flex.gap-xl-5.p-3.gap-mob.mob-content
+    a(href="") 
+        img(src="../app/images/icons/logo.svg", alt="").img-logo 
+        nav.d-flex.gaps.justify-content-evenly.align-items-center.nav(id='nav-tab' role='tablist')
+            if page === 'chat'
+                a(href="#contacts" role='tab' type='button' id='nav-contacts-tab' data-bs-toogle='tab' data-bs-target='#nav-contacts' aria-controls='nav-contacts' aria-selected='false').d-flex.gap-2.align-items-center.nav-link.p-0 
+                    img(src="../app/images/icons/people.svg", alt="").img-people
+                    p.text-white.m-0.font-size-14 Контакты
+                a(href="chat.html" role='tab' type='button' id='nav-chats-tab' data-bs-toogle='tab' data-bs-target='#nav-chats' aria-controls='nav-chats' aria-selected='true').d-flex.gap-2.align-items-center.nav-link.active.p-0
+                    img(src="../app/images/icons/chat.svg", alt="").img-chat
+                    p.text-white.m-0.font-size-14 Сообщения
+                a(href="#profile" role='tab' type='button' id='nav-profile-tab' data-bs-toogle='tab' data-bs-target='#nav-profile' aria-controls='nav-profile' aria-selected='false').d-flex.gap-2.align-items-center.nav-link.p-0
+                    img(src="../app/images/icons/person.svg", alt="").img-person
+                    p.text-white.m-0.font-size-14 Профиль
+            else
+                a(href="#contacts" role='tab' type='button' id='nav-contacts-tab' data-bs-toogle='tab' data-bs-target='#nav-contacts' aria-controls='nav-contacts' aria-selected='true').d-flex.gap-2.align-items-center.nav-link.active.p-0
+                    img(src="../app/images/icons/people.svg", alt="").img-people
+                    p.text-white.m-0.font-size-14 Контакты
+                a(href="chat.html" role='tab' type='button' id='nav-chats-tab' data-bs-toogle='tab' data-bs-target='#nav-chats' aria-controls='nav-chats' aria-selected='false').d-flex.gap-2.align-items-center.nav-link.p-0
+                    img(src="../app/images/icons/chat.svg", alt="").img-chat
+                    p.text-white.m-0.font-size-14 Сообщения
+                a(href="#profile" role='tab' type='button' id='nav-profile-tab' data-bs-toogle='tab' data-bs-target='#nav-profile' aria-controls='nav-profile' aria-selected='false').d-flex.gap-2.align-items-center.nav-link.p-0
+                    img(src="../app/images/icons/person.svg", alt="").img-person
+                    p.text-white.m-0.font-size-14 Профиль

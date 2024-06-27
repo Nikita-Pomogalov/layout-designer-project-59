@@ -12087,9 +12087,14 @@ textarea.form-control-lg {
   white-space: nowrap;
 }
 
-@media screen and (width <= 1400px) {
+@media screen and (width <= 1440px) {
   .gap-xl-5 {
     gap: 1rem !important;
+  }
+}
+@media screen and (width > 1550px) {
+  .gap-xl-5 {
+    gap: 2rem !important;
   }
 }
 @media screen and (width <= 1550px) {
