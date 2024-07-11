@@ -55,6 +55,10 @@ $container-max-widths: (
   border-right: solid 1px $gray;
 }
 
+.mob-content {
+  margin: 10px;
+}
+
 @media screen and (width <= 1300px) {
     .mob-main {
         display: flex;
@@ -65,8 +69,5 @@ $container-max-widths: (
         border: none;
     }
 
-    .mob-content {
-        justify-content: space-between;
-        margin: 0 10px;
-    }
+
 }

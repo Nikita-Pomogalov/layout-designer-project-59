@@ -2,10 +2,35 @@ section.tab-pane.fade(id='nav-profile' role='tabpanel' aria-labelledby='nav-prof
     h2 Профиль
     p.text-secondary.search Поиск по сообщениям
     .list.d-flex.flex-column
-        .d-flex.flex-column
-            img(src="../app/images/avatar_1.jpg", alt="Кодовёнок").rounded-circle.m-b-2
-            h1.h6 Кодовёнок Хекслетович
-            p.text-secondary Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
+        .d-flex.flex-column.info.text-center
+            img(src="../app/images/avatar_1.jpg", alt="Кодовёнок").rounded-circle.mb-2.img-profile
+            h1.h6.mb-3 Кодовёнок Хекслетович
+            p.text-secondary.mb-0 Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
+        ul.list-group.list-group-flush.info-full
+            li.list-group-item
+                .d-flex.justify-content-between
+                    .d-flex.flex-column 
+                        p.text-secondary.mb-0 Страна
+                        p.mb-0 Мосвка, Россия
+                    img(src="../app/images/icons/globe.svg", alt="globe")
+            li.list-group-item
+                .d-flex.justify-content-between
+                    .d-flex.flex-column 
+                        p.text-secondary.mb-0 Телефон
+                        p.mb-0 +7 (499) 123-45-67
+                    img(src="../app/images/icons/telephone.svg", alt="telephone")
+            li.list-group-item
+                .d-flex.justify-content-between
+                    .d-flex.flex-column 
+                        p.text-secondary.mb-0 Email
+                        p.mb-0 nikita.m@hexlet.io
+                    img(src="../app/images/icons/envelope.svg", alt="envelope")
+            li.list-group-item
+                .d-flex.justify-content-between
+                    .d-flex.flex-column 
+                        p.text-secondary.mb-0 Twitter
+                        p.mb-0 @n_mikhaylov
+                    img(src="../app/images/icons/ppl2.svg", alt="people")
 
 
 

@@ -1,7 +1,7 @@
 {
   "name": "layout-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![Actions Status](https://github.com/Nikita-Pomogalov/layout-designer-project-59/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Nikita-Pomogalov/layout-designer-project-59/actions)",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

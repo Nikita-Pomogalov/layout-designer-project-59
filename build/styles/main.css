@@ -13,6 +13,10 @@
   border-right: solid 1px #EFEFEF;
 }
 
+.mob-content {
+  margin: 10px;
+}
+
 @media screen and (width <= 1300px) {
   .mob-main {
     display: flex;
@@ -20,10 +24,6 @@
   }
   .set {
     border: none;
-  }
-  .mob-content {
-    justify-content: space-between;
-    margin: 0 10px;
   }
 }
 .header {
@@ -12051,6 +12051,12 @@ textarea.form-control-lg {
   width: 50px;
   height: 50px;
 }
+.img-profile {
+  width: 90px;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .search {
   border-bottom: 1px #EFEFEF solid;
@@ -12085,6 +12091,14 @@ textarea.form-control-lg {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.info {
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+.info-full {
+  margin-bottom: 0;
 }
 
 @media screen and (width <= 1440px) {

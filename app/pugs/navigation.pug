@@ -1,24 +1,77 @@
 .d-flex.gap-xl-5.p-3.gap-mob.mob-content
+    a(href="#home" id='home-link') 
+        img(src="../app/images/icons/logo.svg", alt="").img-logo 
+    nav(id='nav-tab' role='tablist').d-flex.gaps.justify-content-evenly.align-items-center.nav.nav-pills.nav-fill
+        if page === 'chat'
+            a(href="#contacts" id="nav-contacts-tab" data-bs-toggle="tab" data-bs-target="#nav-contacts" type="button" role="tab" aria-controls="nav-contacts" aria-selected="false").d-flex.gap-2.align-items-center.nav-link.p-0 
+                img(src="../app/images/icons/people.svg", alt="").img-people
+                p.text-white.m-0.font-size-14 Контакты
+            a(href="#chats" id="nav-chats-tab" data-bs-toggle="tab" data-bs-target="#nav-chats" type="button" role="tab" aria-controls="nav-chats" aria-selected="true").d-flex.gap-2.align-items-center.nav-link.active.p-0
+                img(src="../app/images/icons/chat.svg", alt="").img-chat
+                p.text-white.m-0.font-size-14 Сообщения
+            a(href="#profile" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false").d-flex.gap-2.align-items-center.nav-link.p-0
+                img(src="../app/images/icons/person.svg", alt="").img-person
+                p.text-white.m-0.font-size-14 Профиль
+        else
+            a(href="#contacts" id="nav-contacts-tab" data-bs-toggle="tab" data-bs-target="#nav-contacts" type="button" role="tab" aria-controls="nav-contacts" aria-selected="true").d-flex.gap-2.align-items-center.nav-link.active.p-0
+                img(src="../app/images/icons/people.svg", alt="").img-people
+                p.text-white.m-0.font-size-14 Контакты
+            a(href="#chats" id="nav-chats-tab" data-bs-toggle="tab" data-bs-target="#nav-chats" type="button" role="tab" aria-controls="nav-chats" aria-selected="true").d-flex.gap-2.align-items-center.nav-link.p-0
+                img(src="../app/images/icons/chat.svg", alt="").img-chat
+                p.text-white.m-0.font-size-14 Сообщения
+            a(href="#profile" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false").d-flex.gap-2.align-items-center.nav-link.p-0
+                img(src="../app/images/icons/person.svg", alt="").img-person
+                p.text-white.m-0.font-size-14 Профиль
+
+    script.
+        document.addEventListener('DOMContentLoaded', function () { 
+            const links = document.querySelectorAll('.nav-link'); 
+            links.forEach(link => { 
+                link.addEventListener('click', function (event) { 
+                    event.preventDefault();
+                    // Убираем active у всех ссылок 
+                    links.forEach(l => l.classList.remove('active')); 
+
+                    // Добавляем active к текущей ссылке 
+                    this.classList.add('active'); 
+
+                    // Меняем href у ссылки по id 'home-link' 
+                    window.location.hash = this.getAttribute('href');
+
+                }); 
+            }); 
+        });
+//- .d-flex.gap-xl-5.p-3.gap-mob.mob-content
     a(href="") 
         img(src="../app/images/icons/logo.svg", alt="").img-logo 
-        nav.d-flex.gaps.justify-content-evenly.align-items-center.nav(id='nav-tab' role='tablist')
-            if page === 'chat'
-                a(href="#contacts" role='tab' type='button' id='nav-contacts-tab' data-bs-toogle='tab' data-bs-target='#nav-contacts' aria-controls='nav-contacts' aria-selected='false').d-flex.gap-2.align-items-center.nav-link.p-0 
-                    img(src="../app/images/icons/people.svg", alt="").img-people
-                    p.text-white.m-0.font-size-14 Контакты
-                a(href="chat.html" role='tab' type='button' id='nav-chats-tab' data-bs-toogle='tab' data-bs-target='#nav-chats' aria-controls='nav-chats' aria-selected='true').d-flex.gap-2.align-items-center.nav-link.active.p-0
-                    img(src="../app/images/icons/chat.svg", alt="").img-chat
-                    p.text-white.m-0.font-size-14 Сообщения
-                a(href="#profile" role='tab' type='button' id='nav-profile-tab' data-bs-toogle='tab' data-bs-target='#nav-profile' aria-controls='nav-profile' aria-selected='false').d-flex.gap-2.align-items-center.nav-link.p-0
-                    img(src="../app/images/icons/person.svg", alt="").img-person
-                    p.text-white.m-0.font-size-14 Профиль
-            else
-                a(href="#contacts" role='tab' type='button' id='nav-contacts-tab' data-bs-toogle='tab' data-bs-target='#nav-contacts' aria-controls='nav-contacts' aria-selected='true').d-flex.gap-2.align-items-center.nav-link.active.p-0
-                    img(src="../app/images/icons/people.svg", alt="").img-people
-                    p.text-white.m-0.font-size-14 Контакты
-                a(href="chat.html" role='tab' type='button' id='nav-chats-tab' data-bs-toogle='tab' data-bs-target='#nav-chats' aria-controls='nav-chats' aria-selected='false').d-flex.gap-2.align-items-center.nav-link.p-0
-                    img(src="../app/images/icons/chat.svg", alt="").img-chat
-                    p.text-white.m-0.font-size-14 Сообщения
-                a(href="#profile" role='tab' type='button' id='nav-profile-tab' data-bs-toogle='tab' data-bs-target='#nav-profile' aria-controls='nav-profile' aria-selected='false').d-flex.gap-2.align-items-center.nav-link.p-0
-                    img(src="../app/images/icons/person.svg", alt="").img-person
-                    p.text-white.m-0.font-size-14 Профиль
+    nav(id="nav-tab" role="tablist").nav.nav-tabs
+        if page === 'chat'
+            a(href='#contacts' id="nav-contacts-tab" data-bs-toggle="tab" data-bs-target="#nav-contacts" type="button" role="tab" aria-controls="nav-contacts" aria-selected="false").nav-link
+                img(src="../app/images/icons/people.svg", alt="Contacts").img-people
+                p.text-white.m-0.font-size-14 Контакты
+            a(href='chat.html' id="nav-chats-tab" data-bs-toggle="tab" data-bs-target="#nav-chats" type="button" role="tab" aria-controls="nav-chats" aria-selected="true").nav-link.active
+                img(src="../app/images/icons/chat.svg", alt="chats").img-chat
+                p.text-white.m-0.font-size-14 Сообщения
+            a(href='#profile' id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false").nav-link
+                img(src="../app/images/icons/people.svg", alt="profile").img-people
+                p.text-white.m-0.font-size-14 Профиль
+    
+        else
+            a(href='#contacts' id="nav-contacts-tab" data-bs-toggle="tab" data-bs-target="#nav-contacts" type="button" role="tab" aria-controls="nav-contacts" aria-selected="true").nav-link.active
+                img(src="../app/images/icons/people.svg", alt="Contacts").img-people
+                p.text-white.m-0.font-size-14 Контакты
+            a(href='chat.html' id="nav-chats-tab" data-bs-toggle="tab" data-bs-target="#nav-chats" type="button" role="tab" aria-controls="nav-chats" aria-selected="false").nav-link
+                img(src="../app/images/icons/chat.svg", alt="chats").img-chat
+                p.text-white.m-0.font-size-14 Сообщения
+            a(href='#profile' id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false").nav-link
+                img(src="../app/images/icons/people.svg", alt="profile").img-people
+                p.text-white.m-0.font-size-14 Профиль
+    
+//- <div class="tab-content" id="nav-tabContent">
+//-     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+//-     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+//-     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+//- </div>  
+
+    
+
