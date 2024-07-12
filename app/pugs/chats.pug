@@ -20,10 +20,12 @@
     },
   ];
 
+- place = 'Поиск по сообщениям'
+
 if page === 'chat'
     section.tab-pane.fade.show.active(id='nav-chats' role='tabpanel' aria-labelledby='nav-chats-tab')
         h2 Чаты
-        p.text-secondary.search Поиск по сообщениям
+        include search.pug
         .list.d-flex.flex-column
             each value in chats
                 .d-flex.justify-content-between.form
@@ -36,7 +38,7 @@ if page === 'chat'
 else 
     section.tab-pane.fade(id='nav-chats' role='tabpanel' aria-labelledby='nav-chats-tab')
         h2 Чаты
-        p.text-secondary.search Поиск по сообщениям
+        include search.pug
         .list.d-flex.flex-column
             each value in chats
                 .d-flex.justify-content-between.form

@@ -1,6 +1,8 @@
+- place = 'Поиск по сообщениям'
+
 section.tab-pane.fade(id='nav-profile' role='tabpanel' aria-labelledby='nav-profile-tab')
     h2 Профиль
-    p.text-secondary.search Поиск по сообщениям
+    include search.pug
     .list.d-flex.flex-column
         .d-flex.flex-column.info.text-center
             img(src="../app/images/avatar_1.jpg", alt="Кодовёнок").rounded-circle.mb-2.img-profile
