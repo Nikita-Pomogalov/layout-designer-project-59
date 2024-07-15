@@ -1,5 +1,22 @@
 @use 'sass:map';
 $utilities: () !default;
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px
+);
+$border-color: #efefef;
+$border-style: solid;
+$border-width: 1px;
+
+$border-sides: (
+  'top': top,
+  'right': right,
+  'bottom': bottom,
+  'left': left
+);
 
 
 $utilities: map.merge(
@@ -33,23 +50,28 @@ $utilities: map.merge(
                 right: 1rem,
             )
         ),
-        "border-sm": (
-            "property": border,
-            "values": (
-                "": 1px solid #efefef
-            )
-        ),
-        "border-lg-top": (
-            "property": border-top,
-            "values": (
-                "": 1px solid #efefef
-            )
-        ),
-        "border-md-bottom": (
-            "property": border-bottom,
-            "values": (
-                "": 1px solid #efefef
-            )
-        )    
     )
-)
+);
+
+@each $breakpoint, $value in $breakpoints {
+    @each $side, $side-name in $border-sides {
+      .border-#{$breakpoint}-#{$side-name} {
+        @if $value == 0 {
+          border-#{$side}: #{$border-width} #{$border-style} #{$border-color} !important;
+        } @else {
+          @media (min-width: #{$value}) {
+            border-#{$side}: #{$border-width} #{$border-style} #{$border-color} !important;
+          }
+        }
+      }
+    }
+    .border-#{$breakpoint} {
+        @if $value == 0 {
+          border: #{$border-width} #{$border-style} #{$border-color} !important;
+        } @else {
+          @media (min-width: #{$value}) {
+            border: #{$border-width} #{$border-style} #{$border-color} !important;
+          }
+        }
+      }
+    }
