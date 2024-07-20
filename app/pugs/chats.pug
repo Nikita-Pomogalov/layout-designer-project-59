@@ -28,7 +28,7 @@ if page === 'chat'
         include search.pug
         .list.d-flex.flex-column
             each value in chats
-                .d-flex.justify-content-between.form.radius
+                .d-flex.justify-content-between.form
                     .contact2.d-flex.p-3.gap-3
                         img(src=value.avatar, alt="").img-card.rounded-circle
                         .d-flex.flex-column
@@ -41,7 +41,7 @@ else
         include search.pug
         .list.d-flex.flex-column
             each value in chats
-                .d-flex.justify-content-between.form.radius
+                .d-flex.justify-content-between.form
                     .contact2.d-flex.p-3.gap-3
                         img(src=value.avatar, alt="").img-card.rounded-circle
                         .d-flex.flex-column

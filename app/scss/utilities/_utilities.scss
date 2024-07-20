@@ -18,6 +18,32 @@ $border-sides: (
   'left': left
 );
 
+$utilities: map.merge(
+    $utilities,
+    (
+        "opacity": (
+            'property': opacity,
+            'values': (
+                0: 0,
+                25: .25,
+                50: .5,
+                60: .6,
+                75: .75,
+                100: 1,
+            )
+        ),
+        "max-width": (
+            'property': max-width,
+            class: mw,
+            'values': (
+                60: 60%,
+                100: 100%
+            )
+    ),
+    )
+);
+
+
 
 $utilities: map.merge(
     $utilities,

@@ -12,6 +12,8 @@ $theme-colors: (
   "gray": #EFEFEF,
 );
 
+
+
 $gray:      map.get($theme-colors, "gray");
 $primary:   map.get($theme-colors, "primary");
 $secondary: map.get($theme-colors, "secondary");
@@ -55,11 +57,30 @@ $container-max-widths: (
   border-right: solid 1px $gray;
 }
 
+.border-dialog {
+  border-bottom: solid 1px $gray;
+}
+
+.border-dialog-top {
+  border-top: solid 1px $gray;
+  position: fixed;
+  bottom: 16px; 
+  width: 65%;
+  background-color: white; 
+  z-index: 1;
+}
+
 .mob-content {
   margin: 10px;
 }
 
-@media screen and (width <= 1300px) {
+.msg-dialog {
+  border-radius: 16px;
+}
+
+
+
+@media screen and (width <= 1199px) {
     .mob-main {
         display: flex;
         flex-direction: column-reverse;
@@ -69,5 +90,12 @@ $container-max-widths: (
         border: none;
     }
 
+    .border-dialog-top {
+        width: 100%;
+        bottom: 72px;
+    }
 
+    .mob-content {
+      justify-content: space-between;
+    }
 }

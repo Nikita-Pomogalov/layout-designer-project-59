@@ -20,10 +20,7 @@ html(lang="en")
                         include pugs/profile.pug
                                                                                             
                             
-                .col-xl-8.vh-100
-                    .d-flex.flex-column.justify-content-center.align-items-center.h-100
-                        img(src="../app/images/avatar_1.jpg", alt="Кодовёнок").rounded-circle.m-b-2
-                        h1.h6.mb-0 Привет, Кодовёнок
-                        p Выбери чат, чтобы начать общаться
+                .col-xl-8.vh-100.p-0
+                    include pugs/dialog.pug
         script(src='js/bootstrap.min.js')
         script(src='js/bootstrap.bundle.min.js')
