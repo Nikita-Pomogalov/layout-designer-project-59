@@ -55,12 +55,21 @@ else
     section.tab-pane.fade.show.active(id='nav-contacts' role='tabpanel' aria-labelledby='nav-contacts-tab')
         h1.h2.fw-bold.mb-4 Контакты
         include search.pug
-        .list.d-flex.flex-column
+        .list.d-flex.flex-column.mt-2
             each value, key in contacts
-                p.text-muted.mt-5= key
-                each contact2 in value
-                    .contact2.d-flex.form.p-3.mb-3.gap-3
-                        img(src=contact2.avatar, alt="").img-card.rounded-circle
-                        .d-flex.flex-column
-                            .name= contact2.name
-                            .status.text-secondary.text-smaller= contact2.status
+                if key === "A"
+                    p.text-muted.mt-2= key
+                    each contact2 in value
+                        .contact2.d-flex.form.p-3.mb-3.gap-3
+                            img(src=contact2.avatar, alt="").img-card.rounded-circle
+                            .d-flex.flex-column
+                                .name= contact2.name
+                                .status.text-secondary.text-smaller= contact2.status
+                else 
+                    p.text-muted.mt-5= key
+                    each contact2 in value
+                        .contact2.d-flex.form.p-3.mb-3.gap-3
+                            img(src=contact2.avatar, alt="").img-card.rounded-circle
+                            .d-flex.flex-column
+                                .name= contact2.name
+                                .status.text-secondary.text-smaller= contact2.status
