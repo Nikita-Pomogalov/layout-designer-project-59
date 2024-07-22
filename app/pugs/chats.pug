@@ -24,24 +24,24 @@
 
 if page === 'chat'
     section.tab-pane.fade.show.active(id='nav-chats' role='tabpanel' aria-labelledby='nav-chats-tab')
-        h2 Чаты
+        h1.h2.fw-bold.mb-4.mt-2 Чаты
         include search.pug
-        .list.d-flex.flex-column
+        .list.d-flex.flex-column.mt-2
             each value in chats
-                .d-flex.justify-content-between.form
+                .d-flex.justify-content-between.form.shadow-sm.mt-2
                     .contact2.d-flex.p-3.gap-3
                         img(src=value.avatar, alt="").img-card.rounded-circle
                         .d-flex.flex-column
                             .name= value.name
                             .status.text-secondary.text-smaller.msg= value.msg
-                    .time.pt-3= value.time
+                    .time.pt-4.me-3= value.time
 else 
     section.tab-pane.fade(id='nav-chats' role='tabpanel' aria-labelledby='nav-chats-tab')
         h2 Чаты
         include search.pug
         .list.d-flex.flex-column
             each value in chats
-                .d-flex.justify-content-between.form
+                .d-flex.justify-content-between.form.shadow-sm.mt-2
                     .contact2.d-flex.p-3.gap-3
                         img(src=value.avatar, alt="").img-card.rounded-circle
                         .d-flex.flex-column
