@@ -2,7 +2,7 @@
 .set {
   height: 100vh;
   overflow-y: hidden;
-  border: solid #EFEFEF 1rem;
+  border: solid #EFEFEF 1.5rem;
 }
 
 .p-0 {
