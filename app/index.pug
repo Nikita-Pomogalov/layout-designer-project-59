@@ -7,8 +7,8 @@ html(lang="en")
 
         title Document
     body.overflow-y-hidden
-        .container-xxl.set
-            .row 
+        .container-xxl.r-32.set
+            .row
                 .col-xl-4.p-0.border-right.vh-100.mob-main
                     header.header.text-bg-primary.align-middle
                         include pugs/navigation.pug
@@ -18,11 +18,11 @@ html(lang="en")
                         include pugs/profile.pug
                                                                                             
                             
-                .col-xl-8.vh-100
+                .col-xl-8.vh-100.r-32
                     .d-flex.flex-column.align-items-center.justify-content-center.h-100
                         img(src="images/avatar_1.jpg", alt="Кодовёнок").rounded-circle.mb-2
                         p.fw-bold.mb-0 Привет, Кодовёнок
-                        p Выбери чат, чтобы начать общаться
+                        p.text-secondary Выбери чат, чтобы начать общаться
         script(src='js/bootstrap.min.js')
         script(src='js/bootstrap.bundle.min.js')
 

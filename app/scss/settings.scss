@@ -72,13 +72,16 @@ $container-max-widths: (
 
 .mob-content {
   margin: 10px;
+  border-radius: 16px 0 0 0;
 }
 
 .msg-dialog {
   border-radius: 16px;
 }
 
-
+.r-32 {
+  border-radius: 32px;
+}
 
 @media screen and (width <= 1199px) {
     .mob-main {
