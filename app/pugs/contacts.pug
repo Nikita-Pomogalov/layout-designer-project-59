@@ -40,11 +40,11 @@
 
 if page === 'chat'
     section.tab-pane.fade(id='nav-contacts' role='tabpanel' aria-labelledby='nav-contacts-tab')
-        h2 Контакты
+        h1.h2.fw-bold.mb-4 Контакты
         include search.pug
         .list.d-flex.flex-column
             each value, key in contacts
-                p.text-secondary= key
+                p.text-muted.mt-5= key
                 each contact2 in value
                     .contact2.d-flex.form.p-3.gap-3
                         img(src=contact2.avatar, alt="").img-card.rounded-circle
@@ -53,13 +53,13 @@ if page === 'chat'
                             .status.text-secondary.text-smaller= contact2.status
 else
     section.tab-pane.fade.show.active(id='nav-contacts' role='tabpanel' aria-labelledby='nav-contacts-tab')
-        h2 Контакты
+        h1.h2.fw-bold.mb-4 Контакты
         include search.pug
         .list.d-flex.flex-column
             each value, key in contacts
-                p.text-secondary= key
+                p.text-muted.mt-5= key
                 each contact2 in value
-                    .contact2.d-flex.form.p-3.gap-3
+                    .contact2.d-flex.form.p-3.mb-3.gap-3
                         img(src=contact2.avatar, alt="").img-card.rounded-circle
                         .d-flex.flex-column
                             .name= contact2.name

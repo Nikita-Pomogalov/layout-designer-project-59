@@ -171,7 +171,7 @@
 }
 
 .gaps {
-  gap: 2rem;
+  gap: 3rem;
 }
 
 @media screen and (width <= 1200px) {
@@ -191,7 +191,7 @@
 }
 @media screen and (1440px <= width <= 1550px) {
   .gaps {
-    gap: 1rem !important;
+    gap: 1.5rem !important;
   }
   .msg {
     max-width: 200px;
