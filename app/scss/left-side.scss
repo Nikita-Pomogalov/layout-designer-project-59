@@ -157,7 +157,7 @@
   }
   
   .msg {
-    width: 250px;
+    width: 230px;
   }
 
   .not-msg {
@@ -175,7 +175,7 @@
     }
     
     .msg {
-      width: 300px;
+      width: 280px;
     }
 
     .not-msg {
@@ -185,14 +185,18 @@
 
 @media screen and (1440px <= width <= 1550px) {
     .gaps {
-        gap: 2rem !important;
+        gap: 3.5rem !important;
     }
+
+    .msg {
+      width: 300px;
+  }
 }
 
 @media screen and (1551px <= width) {
 
   .msg {
-      max-width: 300px;
+      width: 300px;
   }
 }
 

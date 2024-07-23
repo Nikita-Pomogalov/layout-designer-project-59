@@ -28,25 +28,26 @@ if page === 'chat'
         include search.pug
         .list.d-flex.flex-column.mt-2
             each value in chats
-                .d-flex.justify-content-between.form.shadow-sm.mt-2.pt-2
+                .d-flex.justify-content-between.form.shadow-sm.mt-2.pt-3
                     .contact2.d-flex.p-3.gap-4
                         img(src=value.avatar, alt="").img-card.rounded-circle
                         .d-flex.flex-column
                             .d-flex.not-msg
                                 .name.fw-bold= value.name
-                                .time.ms-auto= value.time
+                                .time.ms-auto.font-size-14.me-3= value.time
                             .status.text-secondary.text-smaller.msg= value.msg
                     
 else
     section.tab-pane.fade(id='nav-chats' role='tabpanel' aria-labelledby='nav-chats-tab')
         h2 Чаты
         include search.pug
-        .list.d-flex.flex-column
+        .list.d-flex.flex-column.mt-2
             each value in chats
                 .d-flex.justify-content-between.form.shadow-sm.mt-2.pt-2
                     .contact2.d-flex.p-3.gap-4
                         img(src=value.avatar, alt="").img-card.rounded-circle
                         .d-flex.flex-column
-                            .name.fw-bold= value.name
+                            .d-flex.not-msg
+                                .name.fw-bold= value.name
+                                .time.ms-auto.font-size-14= value.time
                             .status.text-secondary.text-smaller.msg= value.msg
-                    .time.pt-3.me-3= value.time
