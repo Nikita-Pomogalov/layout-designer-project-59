@@ -24,7 +24,7 @@
 
 if page === 'chat'
     section.tab-pane.fade.show.active(id='nav-chats' role='tabpanel' aria-labelledby='nav-chats-tab')
-        h1.h2.fw-bold.mb-4.mt-2 Чаты
+        h1.h2.fw-bold.mb-4 Чаты
         include search.pug
         .list.d-flex.flex-column.mt-2
             each value in chats
@@ -32,7 +32,7 @@ if page === 'chat'
                     .contact2.d-flex.p-3.gap-3
                         img(src=value.avatar, alt="").img-card.rounded-circle
                         .d-flex.flex-column
-                            .name= value.name
+                            .name.fw-bold= value.name
                             .status.text-secondary.text-smaller.msg= value.msg
                     .time.pt-4.me-3= value.time
 else 
@@ -45,6 +45,6 @@ else
                     .contact2.d-flex.p-3.gap-3
                         img(src=value.avatar, alt="").img-card.rounded-circle
                         .d-flex.flex-column
-                            .name= value.name
+                            .name.fw-bold= value.name
                             .status.text-secondary.text-smaller.msg= value.msg
                     .time.pt-3= value.time
