@@ -1,7 +1,7 @@
 .d-flex.gaps.p-3.gap-mob.mob-content.m-0.pt-4
     a(href="#home" id='home-link') 
         img(src="images/icons/logo.svg", alt="").img-logo 
-    nav(id='nav-tab' role='tablist').d-flex.gaps.justify-content-evenly.align-items-center.nav.nav-pills.nav-fill
+    nav(id='nav-tab' role='tablist').d-flex.gaps-nav.justify-content-evenly.align-items-center.nav.nav-pills.nav-fill
         if page === 'chat'
             a(href="#current-chat" id="nav-dialog-tab" data-bs-toggle="tab" data-bs-target="#nav-current-chat" type="button" role="tab" aria-controls="nav-dialog" aria-selected="false").d-flex.gap-2.align-items-center.nav-link.p-0.d-xl-none 
                 img(src="images/icons/chat-left-text.svg", alt="chat").img-chat

@@ -84,11 +84,16 @@
 }
 
 .msg {
-  max-width: 318px;
+  max-width: 340px;
   min-width: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 14px;
+}
+
+.not-msg {
+  width: 340px;
 }
 
 .info{
@@ -105,46 +110,82 @@
 }
 
 .gaps {
-  gap: 2.5rem !important;
+  gap: 4rem !important;
 }
 
-@media screen and (width <= 1200px  ){
+.gaps-nav {
+  gap: 2rem !important;
+}
+
+@media screen and (width <= 725px) {
+  .not-msg {
+    width: 70vw;
+  }
+}
+
+@media screen and (725px <= width <= 1000px) {
+  .not-msg {
+    width: 80vw;
+  }
+}
+
+@media screen and (1000px <= width <= 1200px){
   .gaps {
       gap: none;
   }
+
+  .gaps-nav {
+    gap: 1rem !important;
+  }
   
   .msg {
-    max-width: 200px;
-}
+    width: 80vw;
+  }
+
+  .not-msg {
+    width: 85vw;
+  }
 }
 
 @media screen and (1200px <= width <= 1290px){
   .gaps {
       gap: 0.23rem !important;
   }
+
+  .gaps-nav {
+    gap: 1rem !important;
+  }
   
   .msg {
-    max-width: 200px;
-}
+    width: 250px;
+  }
+
+  .not-msg {
+    width: 250px;
+  }
 }
 
 @media screen and (1290px <= width <= 1440px){
     .gaps {
-        gap: 0.75rem !important;
+        gap: 1.5rem !important;
+    }
+
+    .gaps-nav {
+      gap: 1.5rem !important;
     }
     
     .msg {
-      max-width: 200px;
-  }
+      width: 300px;
+    }
+
+    .not-msg {
+      width: 300px;
+    }
   }
 
 @media screen and (1440px <= width <= 1550px) {
     .gaps {
-        gap: 1.5rem !important;
-    }
-
-    .msg {
-        max-width: 200px;
+        gap: 2rem !important;
     }
 }
 
@@ -156,14 +197,18 @@
 }
 
 @media screen and (width <= 500px) {
+    .not-msg {
+        width: 65vw;
+    }
+    
     .msg {
-        max-width: 200px;
+      width: 60vw;
     }
 }
 
 @media screen and (width <= 400px) {
     .msg {
-        max-width: 100px;
+        width: 50vw;
     }
 }
 
