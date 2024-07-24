@@ -177,8 +177,8 @@
 }
 
 .btn-dialog {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
 }
 
 .gaps {
@@ -200,6 +200,13 @@
   }
   .scroll {
     height: 75vh;
+  }
+  .gaps-nav {
+    gap: 2.5rem !important;
+  }
+  .btn-dialog {
+    width: 45px;
+    height: 45px;
   }
 }
 @media screen and (725px <= width <= 1000px) {
