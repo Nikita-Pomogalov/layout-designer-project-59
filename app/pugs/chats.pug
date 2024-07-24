@@ -28,13 +28,13 @@ if page === 'chat'
         include search.pug
         .list.d-flex.flex-column.mt-2
             each value in chats
-                .d-flex.justify-content-between.form.shadow-sm.mt-2.pt-3
+                .d-flex.justify-content-between.form.shadow-sm.mt-xl-2.mt-1.pt-3
                     .contact2.d-flex.p-3.gap-4
                         img(src=value.avatar, alt="").img-card.rounded-circle
                         .d-flex.flex-column
                             .d-flex.not-msg
                                 .name.fw-bold= value.name
-                                .time.ms-auto.font-size-14.me-3= value.time
+                                .time.ms-auto.font-size-14.me-xl-3.me-4= value.time
                             .status.text-secondary.text-smaller.msg= value.msg
                     
 else
@@ -49,5 +49,5 @@ else
                         .d-flex.flex-column
                             .d-flex.not-msg
                                 .name.fw-bold= value.name
-                                .time.ms-auto.font-size-14= value.time
+                                .time.ms-auto.font-size-14.me-xl-3.me-4= value.time
                             .status.text-secondary.text-smaller.msg= value.msg
