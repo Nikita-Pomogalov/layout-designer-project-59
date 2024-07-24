@@ -1,6 +1,7 @@
 // npx stylelint ./app/scss/**/*.scss 
 // "empty-line-between-groups": true, - for stylelintr
 $enable-shadows: true;
+$enable-negative-margins: true;
 @import "./settings.scss";
 @import "./header.scss";
 @import "./left-side.scss";

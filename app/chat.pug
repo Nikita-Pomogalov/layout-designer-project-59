@@ -18,9 +18,13 @@ html(lang="en")
                         include pugs/chats.pug
                         include pugs/contacts.pug
                         include pugs/profile.pug
+                        .d-block.d-xl-none
+                            include pugs/dialog-mob.pug
                                                                                             
                             
                 .col-xl-8.vh-100.p-0.r-32
-                    include pugs/dialog.pug
+                    .d-none.d-xl-block 
+                        include pugs/dialog.pug
+
         script(src='js/bootstrap.min.js')
         script(src='js/bootstrap.bundle.min.js')
