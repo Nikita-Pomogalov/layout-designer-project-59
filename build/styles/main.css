@@ -120,8 +120,7 @@
   height: 23.33px;
 }
 .img-person {
-  width: 18.75px;
-  height: 18.75px;
+  height: 25px;
 }
 .img-card {
   width: 50px;
@@ -195,6 +194,11 @@
     width: 70vw;
   }
 }
+@media screen and (width <= 1200px) {
+  .left-indent {
+    padding: 1.5rem 1.5rem 0;
+  }
+}
 @media screen and (725px <= width <= 1000px) {
   .not-msg {
     width: 80vw;
@@ -204,9 +208,6 @@
   .gaps {
     gap: none;
   }
-  .gaps-nav {
-    gap: 1rem !important;
-  }
   .msg {
     width: 80vw;
   }
@@ -214,12 +215,12 @@
     width: 85vw;
   }
 }
-@media screen and (1200px <= width <= 1290px) {
+@media screen and (1200px <= width <= 1315px) {
   .gaps {
     gap: 0.23rem !important;
   }
   .gaps-nav {
-    gap: 1rem !important;
+    gap: 0.9rem !important;
   }
   .msg {
     width: 230px;
@@ -228,7 +229,7 @@
     width: 250px;
   }
 }
-@media screen and (1290px <= width <= 1440px) {
+@media screen and (1315px <= width <= 1460px) {
   .gaps {
     gap: 1.5rem !important;
   }
@@ -242,7 +243,7 @@
     width: 300px;
   }
 }
-@media screen and (1440px <= width <= 1550px) {
+@media screen and (1460px <= width <= 1550px) {
   .gaps {
     gap: 3.5rem !important;
   }
