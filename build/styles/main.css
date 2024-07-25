@@ -190,10 +190,6 @@
   gap: 2rem !important;
 }
 
-.small-msg {
-  margin-right: 4rem;
-}
-
 @media screen and (width <= 725px) {
   .not-msg {
     width: 70vw;
@@ -8112,8 +8108,8 @@ textarea.form-control-lg {
   max-width: 80% !important;
 }
 
-.mw-90 {
-  max-width: 90% !important;
+.mw-95 {
+  max-width: 95% !important;
 }
 
 .mw-100 {
@@ -13666,8 +13662,8 @@ textarea.form-control-lg {
   max-width: 80% !important;
 }
 
-.mw-90 {
-  max-width: 90% !important;
+.mw-95 {
+  max-width: 95% !important;
 }
 
 .mw-100 {
