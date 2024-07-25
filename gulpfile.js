@@ -6,7 +6,7 @@ const browserSync = require('browser-sync').create();
 
 const browsersync = () => {
   browserSync.init({
-    server: { baseDir: 'build/' },
+    server: { baseDir: 'docs/' },
     notify: false,
     online: true,
     open: false
@@ -22,7 +22,7 @@ const scripts = () => {
     './node_modules/bootstrap/dist/js/bootstrap.min.js',
     './node_modules/bootstrap/dist/js/bootstrap.min.js.map',
   ])
-  .pipe(dest('./build/js/'))
+  .pipe(dest('./docs/js/'))
   .pipe(browserSync.stream())
 };
 
@@ -32,7 +32,7 @@ const sass2css = () => {
   ])
   .pipe(sass())
   .pipe(concat('main.css'))
-  .pipe(dest('./build/styles/'))
+  .pipe(dest('./docs/styles/'))
   .pipe(browserSync.stream())
 };
 
@@ -41,7 +41,7 @@ const pug2html = () => {
     './app/**/*.pug',
   ])
   .pipe(pug())
-  .pipe(dest('./build/'))
+  .pipe(dest('./docs/'))
   .pipe(browserSync.stream())
 };
 
