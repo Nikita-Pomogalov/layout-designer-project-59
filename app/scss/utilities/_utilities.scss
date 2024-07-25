@@ -1,29 +1,27 @@
-@use 'sass:map';
+@use "sass:map";
 $utilities: () !default;
 $breakpoints: (
-  'sm': 576px,
-  'md': 768px,
-  'lg': 992px,
-  'xl': 1200px,
-  'xxl': 1400px
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px
 );
 $border-color: #efefef;
 $border-style: solid;
 $border-width: 1px;
-
 $border-sides: (
-  'top': top,
-  'right': right,
-  'bottom': bottom,
-  'left': left
+  "top": top,
+  "right": right,
+  "bottom": bottom,
+  "left": left
 );
-
 $utilities: map.merge(
     $utilities,
     (
         "opacity": (
-            'property': opacity,
-            'values': (
+            "property": opacity,
+            "values": (
                 0: 0,
                 25: .25,
                 50: .5,
@@ -33,9 +31,9 @@ $utilities: map.merge(
             )
         ),
         "max-width": (
-            'property': max-width,
+            "property": max-width,
             class: mw,
-            'values': (
+            "values": (
                 70: 70%,
                 80: 80%,
                 95: 95%,
@@ -44,8 +42,6 @@ $utilities: map.merge(
     ),
     )
 );
-
-
 
 $utilities: map.merge(
     $utilities,
