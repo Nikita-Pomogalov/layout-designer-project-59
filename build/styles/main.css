@@ -153,6 +153,7 @@
 
 .time {
   color: #ADB5BD;
+  margin-right: 2rem;
 }
 
 .msg {
@@ -8107,6 +8108,10 @@ textarea.form-control-lg {
   max-width: 80% !important;
 }
 
+.mw-90 {
+  max-width: 90% !important;
+}
+
 .mw-100 {
   max-width: 100% !important;
 }
@@ -13655,6 +13660,10 @@ textarea.form-control-lg {
 
 .mw-80 {
   max-width: 80% !important;
+}
+
+.mw-90 {
+  max-width: 90% !important;
 }
 
 .mw-100 {
