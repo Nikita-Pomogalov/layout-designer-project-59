@@ -117,6 +117,10 @@
   gap: 2rem !important;
 }
 
+.small-msg {
+  margin-right: 4rem;
+}
+
 @media screen and (width <= 725px) {
   .not-msg {
     width: 70vw;
@@ -223,7 +227,7 @@
     }
     
     .msg {
-      width: 60vw;
+      width: 55vw;
     }
 }
 
