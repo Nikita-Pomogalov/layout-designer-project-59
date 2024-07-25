@@ -1,4 +1,5 @@
 @use "sass:map";
+
 $utilities: () !default;
 $breakpoints: (
   "sm": 576px,
@@ -17,85 +18,85 @@ $border-sides: (
   "left": left
 );
 $utilities: map.merge(
-    $utilities,
-    (
-        "opacity": (
-            "property": opacity,
-            "values": (
-                0: 0,
-                25: .25,
-                50: .5,
-                60: .6,
-                75: .75,
-                100: 1,
-            )
-        ),
-        "max-width": (
-            "property": max-width,
-            class: mw,
-            "values": (
-                70: 70%,
-                80: 80%,
-                95: 95%,
-                100: 100%,
-            )
-    ),
-    )
+  $utilities,
+  (
+      "opacity": (
+          "property": opacity,
+          "values": (
+              0: 0,
+              25: .25,
+              50: .5,
+              60: .6,
+              75: .75,
+              100: 1,
+          )
+      ),
+      "max-width": (
+          "property": max-width,
+           class: mw,
+           "values": (
+               70: 70%,
+               80: 80%,
+               95: 95%,
+               100: 100%,
+          )
+  ),
+  )
 );
 
 $utilities: map.merge(
-    $utilities,
-        (
-        "radius": (
-            "property": border-radius,
-            class: radius,
-            "values": (
-                null: 1rem,
-            )
-        ),
-        "radius-left-top":(
-            "property": border-top-left-radius,
-            class: radius,
-            "values": (
-                left-top: 1rem,
-            )
-        ),
-        "radius-left":(
-            "property": border-top-left-radius border-bottom-left-radius,
-            class: radius,
-            "values": (
-                left: 1rem,
-            )
-        ),
-        "radius-right":(
-            "property": border-top-right-radius border-bottom-right-radius,
-            class: radius,
-            "values": (
-                right: 1rem,
-            )
-        ),
-    )
+  $utilities,
+      (
+      "radius": (
+          "property": border-radius,
+          class: radius,
+          "values": (
+              null: 1rem,
+          )
+      ),
+      "radius-left-top":(
+          "property": border-top-left-radius,
+          class: radius,
+          "values": (
+              left-top: 1rem,
+          )
+      ),
+      "radius-left":(
+          "property": border-top-left-radius border-bottom-left-radius,
+          class: radius,
+          "values": (
+              left: 1rem,
+          )
+      ),
+      "radius-right":(
+          "property": border-top-right-radius border-bottom-right-radius,
+          class: radius,
+          "values": (
+              right: 1rem,
+          )
+      ),
+  )
 );
 
 @each $breakpoint, $value in $breakpoints {
-    @each $side, $side-name in $border-sides {
-      .border-#{$breakpoint}-#{$side-name} {
-        @if $value == 0 {
+  @each $side, $side-name in $border-sides {
+    .border-#{$breakpoint}-#{$side-name} {
+      @if $value == 0 {
+        border-#{$side}: #{$border-width} #{$border-style} #{$border-color} !important;
+      } @else {
+        @media (min-width: #{$value}) {
           border-#{$side}: #{$border-width} #{$border-style} #{$border-color} !important;
-        } @else {
-          @media (min-width: #{$value}) {
-            border-#{$side}: #{$border-width} #{$border-style} #{$border-color} !important;
-          }
         }
       }
     }
-    .border-#{$breakpoint} {
-        @if $value == 0 {
+  }
+  .border-#{$breakpoint} {
+      @if $value == 0 {
+        border: #{$border-width} #{$border-style} #{$border-color} !important;
+      } @else {
+        @media (min-width: #{$value}) {
           border: #{$border-width} #{$border-style} #{$border-color} !important;
-        } @else {
-          @media (min-width: #{$value}) {
-            border: #{$border-width} #{$border-style} #{$border-color} !important;
-          }
         }
       }
     }
+  }
