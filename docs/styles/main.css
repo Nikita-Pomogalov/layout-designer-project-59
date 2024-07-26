@@ -202,6 +202,9 @@
   .left-indent {
     padding: 1.5rem 1.5rem 0;
   }
+  .cnt {
+    height: 60vh;
+  }
   .scroll {
     height: 75vh;
   }

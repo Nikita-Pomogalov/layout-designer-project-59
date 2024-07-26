@@ -42,7 +42,7 @@ if page === 'chat'
     section.tab-pane.fade(id='nav-contacts' role='tabpanel' aria-labelledby='nav-contacts-tab')
         h1.h2.fw-bold.mb-4.mt-2 Контакты
         include search.pug
-        .list.d-flex.flex-column.mt-2
+        .list.d-flex.flex-column.mt-2.mb-5
             each value, key in contacts
                 if key === "A"
                     p.text-muted.mt-2= key
@@ -64,7 +64,7 @@ else
     section.tab-pane.fade.show.active(id='nav-contacts' role='tabpanel' aria-labelledby='nav-contacts-tab')
         h1.h2.fw-bold.mb-4.mt-2 Контакты
         include search.pug
-        .list.d-flex.flex-column.mt-2
+        .list.d-flex.flex-column.mt-2.mb-5
             each value, key in contacts
                 if key === "A"
                     p.text-muted.mt-2= key
@@ -82,3 +82,4 @@ else
                             .d-flex.flex-column
                                 .name= contact2.name
                                 .status.text-secondary.text-smaller= contact2.status
+h2 
