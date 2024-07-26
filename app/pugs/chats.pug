@@ -46,8 +46,9 @@ else
                 .d-flex.justify-content-between.form.shadow-sm.mt-xl-2.pt-2
                     .contact2.d-flex.p-4.gap-4.ps-3.pt-2
                         img(src=value.avatar, alt="").img-card.rounded-circle
-                        .d-flex.flex-column
-                            .d-flex.not-msg
-                                .name.fw-bold= value.name
-                                .time.ms-auto.me-xl-3= value.time
-                            .status.text-secondary.text-smaller.msg= value.msg
+                        a(href='chat.html').text-decoration-none
+                            .d-flex.flex-column
+                                .d-flex.not-msg
+                                    .name.fw-bold.text-dark= value.name
+                                    .time.ms-auto.me-xl-3= value.time
+                                .status.text-secondary.text-smaller.msg= value.msg
