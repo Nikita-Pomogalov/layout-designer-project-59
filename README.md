@@ -3,11 +3,11 @@
 
 
 Project hexlet-chat
-Mobile version is working bad because Autotests completed on this version.
-Changes will be pushed later
+Layout of a responsive messenger website.
+Will be improved over time
 
 ---
 
 Проект Hexlet-chat
-Мобильная версия работает плохо, так как автотесты выполняются на этой версии.
-Изменения будут внесены позже
+Макет адаптивного сайта-мессенджера.
+Со временем будет дорабатываться
